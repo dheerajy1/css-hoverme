@@ -1,18 +1,25 @@
-
-body{
+body {
     display: grid;
     place-content: center;
-}
-h1{
-position: relative;
-font: 5em sans-serif;
-}
-h1:hover::before{
+  }
+  h1 {
+    position: relative;
+    font: 5em sans-serif;
+  }
+  h1:before {
     content: "";
     display: block;
     background-color: rgb(93, 104, 231);
-    height: 1em;
-    width: 1em;
     position: absolute;
-
-}
+    top: 88px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: transform 0.3s ease;
+    transform: scale(0);
+  }
+  
+  h1:hover::before {
+    transform: scale(1);
+  }
+  
